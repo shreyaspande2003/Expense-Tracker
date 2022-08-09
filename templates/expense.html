@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+<head>
+
+
+
+  <meta charset="utf-8">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='expense.css') }}">
+  <!-- <div style="background-image: url('C:\Users\Shreyas Pande\Desktop\myproject\images\paimsa.jpg');"></div> -->
+  <body style="background-image: url('{{url_for('static',filename='abcd.jpg')}}')">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      
+      </button>
+
+
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+
+        </form>
+      </div>
+    </nav>
+  </body>
+  <h1>
+  <marquee behavior="scroll" direction="right" scrollamount="12">Simple expense manager project </marquee>
+  </h1>
+
+  <h2>Add a new expense:</h2>
+  
+  <div id="form-box">
+    <form action="/expense" method="POST">
+      <div>
+        <span> Payment Mode:</span>
+        <select name="mode">
+          <option value="card">Card</option>
+          <option value="cash">Cash</option>
+          <option value="UPI">UPI</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <span>Particulars:</span> <input type="text" name="item-name" placeholder="What did you spend on?" required>
+      </div>
+
+      <div>
+        <span>Date:</span> <input type="date" name="date" required>
+      </div>
+
+      <div>
+        <span>Amount:</span> <input type="number" name="amount" placeholder="How much?" required>
+      </div>
+      <div>
+        <span> Payment Type:</span>
+        <select name="type">
+          <option value="Debit">Debit</option>
+          <option value="Credit">Credit</option>
+        </select>
+      </div>
+      <p></p>
+      <button type="submit" class="btn btn-success">Confirm</button>
+      
+    </form>
+  </div>
+
+  
+  
+
+
+</html>

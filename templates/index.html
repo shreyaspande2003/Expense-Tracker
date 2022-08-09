@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  
+  <meta charset="utf-8">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <body style="background-image: url('{{url_for('static',filename='bank.png')}}')" >
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+      
+      
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+
+        </form>
+      </div>
+    </nav>
+  
+    <h1>
+    </h1>
+    <h1>HOME PAGE</h1>
+    <br>
+    <hr>
+    <br>
+      <div class="btn-group-horizontal">
+
+        <div class="content"></div>
+        <ul>
+            
+              <div>
+                  <span><h3>Bank Websites:</h3></span>
+                  
+                  <a href="https://www.onlinesbi.com/"><button type="button" class="btn btn-info"><h4>SBI</h4></button></a>
+                  <a href="https://www.icicibank.com/"><button type="button" class="btn btn-info"><h4>ICICI</h4></button></a>
+                  <a href="https://www.axisbank.com/"><button type="button" class="btn btn-info"><h4>AXIS</h4></button></a>
+                  <a href="https://www.unionbankofindia.co.in/"><button type="button" class="btn btn-info"><h4>UNION BANK</h4></button></a>
+                  <a href="https://canarabank.com/"><button type="button" class="btn btn-info"><h4>CANARA BANK</h4></button></a>
+              
+                </div>
+                
+            <br>
+            <div>
+                <span><h3>Cash Book</h3></span><a href="/cashbook"><button type="button" class="btn btn-info"><h4>OPEN</h4></button></a>
+            </div>
+            <p></p>
+            <div>
+                <span><h3>Add expense</h3></span><a href="/expense"><button type="button" class="btn btn-info"><h4>OPEN</h4></button></a>
+            </div>
+         </div>
+        </ul>
+  </body>
+</div>
+
+</html>
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+        
+        
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+  
+          </form>
+        </div>
+      </nav>
+    <header class="masthead" style="background-image: url('{{url_for( 'static',filename='about.jpg')}}')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading"></div>
+                        <h1>ABOUT US</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+      <section class="introduction-section" >
+        <h1>My Expenditure Tracker</h1>
+          <p>This Project of ours keeps track of the money an indiviual spends.</p>
+           <p> We have basically tried to maintain record of what you spend, what you earn,
+           <p>in terms of credit and debit while also keeping track of payment methods to help user get hold of what he spent and from where.</p>
+           <p>Bank links are also provided to prevent extra chaos and hustle. Basically we tried to get all the things at a common place rather than visiting a ton of websites and downloading apps.</p>
+          <hr>
+           <p>Created by: Shreyas Pande, Piyush Pancholi, Prathamesh Gujar</p>
+      </section>
+</body>
+</html>

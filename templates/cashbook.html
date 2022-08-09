@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+<head>
+
+
+
+  <meta charset="utf-8">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='expense.css') }}">
+  <body style="background-image: url('{{url_for('static',filename='abcd.jpg')}}')">
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        
+        </button>
+  
+  
+  
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+  
+          </form>
+        </div>
+      </nav>
+
+  
+  <h1>The total amount debited is :₹{{debit}}</h1>
+  <h1>The total amount credited is :₹{{credit}}</h1>
+
+  
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+
+    <h2>CASH BOOK</h2>
+    
+  <table class="table-primary" >
+    <tr>
+      <th>Sr No.</th>
+      <th id="date">date</th>
+      <th id="mode" class="center">Mode</th>
+      <th>Particulars</th>
+      
+      <th id="type">Type</th>
+      <th style="text-align: right" id="amount">amount</th>
+    </tr>
+    {% for datas in alldata %}
+    <tr>
+      <th>{{loop.index}}</th>
+      <th id="date">{{datas.date}}</th>
+      <th id="mode" class="center">{{datas.mode}}</th>
+      <th>{{datas.name}}</th>
+      <th id="type">{{datas.type}}</th>
+      <th style="text-align: right" id="amount">₹{{datas.amount}}</th>
+    </tr>
+    
+    {% endfor %}
+
+    <tr id="if-empty">
+      <td colspan="6"><span>Your added items will show up here!</span></td>
+    </tr>
+    
+  </table>
+    <form action="/delete">
+      <button style="background-color:yellow;margin-left:auto;margin-right:auto;display:block;" type="submit" class="btn btn-warning">DELETE ALL DATA</button>
+    </form>
+  </body>
+
+
+</html>
